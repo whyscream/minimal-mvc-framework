@@ -2,6 +2,6 @@
 
 <ul>
 <?php foreach ($persons as $person): ?>
-    <li><a href="detail/<?= strtolower($person->name) ?>"><?= $person->name ?></a></li>
+    <li><a href="/persons/detail/<?= strtolower($person->name) ?>"><?= $person->name ?></a></li>
 <?php endforeach; ?>
 </ul>
