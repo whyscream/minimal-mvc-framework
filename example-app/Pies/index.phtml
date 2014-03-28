@@ -1,0 +1,7 @@
+<p>We baked <?= count($pies) ?> pies today.</p>
+<ul>
+<?php foreach ($pies as $pie): ?>
+    <li><?= $pie->name ?> with a diameter of <?= $pie->diameter ?> cm</li>
+<?php endforeach; ?>
+</ul>
+<p>Yum yum yum!</p>

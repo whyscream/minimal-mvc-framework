@@ -1,0 +1,7 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE pies(name varchar(32), diameter int);
+INSERT INTO "pies" VALUES('strawberry',28);
+INSERT INTO "pies" VALUES('apple pie',25);
+INSERT INTO "pies" VALUES('schwarzwalder kirsch',25);
+COMMIT;

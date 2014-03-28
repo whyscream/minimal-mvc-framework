@@ -1,7 +1,7 @@
 Minimal MVC Framework
 =====================
 
-This is a research / proof of concept project to build a minimal MVC framework 
+This is a research / proof of concept project to build a minimal MVC framework
 in PHP. After looking at several MVC frameworks in PHP, I thought they were
 all too complicated to setup, and too over-engineered to my liking.
 
@@ -13,9 +13,9 @@ Things I didn't like, were:
   needed, but was forced to implement.
 
 My conclusion was actually that there must be reasons I wasn't aware of for
-all this complexity. The only way to find out what those were, was to try and 
-write it myself. This project is a simple-as-possible MVC framework in less
-than 200 LOC (excluding the example application). I don't say it's production 
+all this complexity. The only way to find out what those were, was to try and
+write it myself. This project is a simple-as-possible MVC framework, written
+in around 250 LOC (excluding the example application). I don't say it's production
 quality, but it works and has all basic features.
 
 Setup
@@ -29,9 +29,10 @@ not using Apache, you should replicate the simple mod_rewrite setup from
 Example application
 -------------------
 
-The directory ``example-app`` is a simple application that has two controllers that 
-show basic usage of controllers and views. The ``PersonsController`` also shows usage
-of a Model populated with a (read-only) JSON data file.
+The directory ``example-app`` is a simple application that has a few
+controllers that show basic usage of controllers and views. The
+``PersonsController`` shows usage of a Model populated with a (read-only) JSON
+data file, while the ``PiesController`` demonstrates an sqlite database.
 
 Usage
 -----
@@ -48,7 +49,8 @@ in the application root directory:
 - a directory ``Foo`` with file ``Foo/bar.phtml`` which is the template for 
   the view.
 
-You can take a look at the example application for pointers on how to start.
+You can take a look at the example application and the api documentation for
+pointers on how to start.
 
 Documentation
 -------------
