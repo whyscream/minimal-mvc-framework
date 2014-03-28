@@ -1,0 +1,7 @@
+<p>This is a list of <?= $person_count ?> persons:</p>
+
+<ul>
+<?php foreach ($persons as $person): ?>
+    <li><a href="detail/<?= strtolower($person->name) ?>"><?= $person->name ?></a></li>
+<?php endforeach; ?>
+</ul>
