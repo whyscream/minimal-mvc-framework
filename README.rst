@@ -15,7 +15,7 @@ Things I didn't like, were:
 My conclusion was actually that there must be reasons I wasn't aware of for
 all this complexity. The only way to find out what those were, was to try and
 write it myself. This project is a simple-as-possible MVC framework, written
-in around 250 LOC (excluding the example application). I don't say it's production
+in around 260 LOC (excluding the example application). I don't say it's production
 quality, but it works and has all basic features.
 
 Setup
@@ -32,7 +32,7 @@ Example application
 The directory ``example-app`` is a simple application that has a few
 controllers that show basic usage of controllers and views. The
 ``PersonsController`` shows usage of a Model populated with a (read-only) JSON
-data file, while the ``PiesController`` demonstrates an sqlite database.
+data file, while the ``PiesController`` demonstrates using an sqlite database.
 
 Usage
 -----
