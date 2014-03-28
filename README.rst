@@ -9,7 +9,7 @@ Things I didn't like, were:
 
 * complicated and deep directory structures were dictated in order to organise
   Models, Controllers, Views and config files.
-* lots of abtraction levels in order to facilitate many use cases I never
+* lots of abstraction levels in order to facilitate many use cases I never
   needed, but was forced to implement.
 
 My conclusion was actually that there must be reasons I wasn't aware of for
