@@ -5,7 +5,7 @@
     /**
      * Basic model that can be populated using a JSON file.
      */
-    class JsonModel extends \ArrayIterator {
+    class JsonModel extends \ArrayIterator implements \Iterator, \Countable {
 
         /**
          * Create a new model based on a JSON file.
