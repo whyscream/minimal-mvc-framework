@@ -3,7 +3,7 @@
     use Mvc\Controller;
     use Mvc\View;
     use Mvc\JsonModel;
-    use Mvc\ErrorController;
+    use Mvc\Application;
 
     /**
      * The PersonsController is used to handle various requests
@@ -39,8 +39,7 @@
             $person_name = array_shift($request);
             if (is_null($person_name)) {
                 // no person name specified in request
-                $controller = new ErrorController(array(404));
-                $controller->indexView();
+                Application::handleError(404);
                 exit;
             }
 
@@ -55,8 +54,7 @@
 
             if(!$found) {
                 // specified person name does not exist in model
-                $controller = new ErrorController(array(404));
-                $controller->indexView();
+                Application::handleError(404);
                 exit;
             }
 

@@ -82,24 +82,17 @@
             $controller_name = ucfirst(strtolower($controller_name)) .'Controller';
             if (!class_exists($controller_name)) {
                 // no such controller
-                $this->handleError(404);
+                self::handleError(404);
                 exit;
             }
 
             $view_name = strtolower($view_name) .'View';
-            if (!method_exists($controller_name, $view_name)) {
-                // no such view
-                $this->handleError(404);
-                exit;
-            }
-
-            // all should be fine, run it
             try {
                 $controller = new $controller_name($request);
                 $controller->$view_name($request);
             } catch (\Exception $err) {
                 // an exception inside a controller occurred
-                $this->handleException($err);
+                self::handleException($err);
                 exit;
             }
         }
@@ -109,7 +102,7 @@
          *
          * @param int $error_code The HTTP error code to display.
          */
-        private function handleError($error_code=404) {
+        public static function handleError($error_code) {
             $controller = new MvcErrorController(array($error_code));
             $controller->indexView();
         }
@@ -119,7 +112,7 @@
          *
          * @param \Exception $err The Exception to display.
          */
-        private function handleException($err) {
+        public static function handleException($err) {
             $controller = new MvcErrorController(array(500));
             $controller->setException($err);
             $controller->indexView();
