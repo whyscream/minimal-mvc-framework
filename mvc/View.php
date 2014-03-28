@@ -51,7 +51,7 @@
         public function render() {
             if (!is_readable($this->file)) {
                 throw new \InvalidArgumentException(sprintf(
-                    "View template '%s' is not a valid file",
+                    "View template file '%s' is unavailable",
                     $this->file
                 ));
             }
