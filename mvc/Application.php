@@ -14,7 +14,7 @@
      */
     class Application {
 
-        private $path;
+        public static $path;
         private $default_controller;
         private $default_view;
 
@@ -32,15 +32,14 @@
                     $application_path
                 ));
             }
-            $this->path = $application_path;
-            View::$application_path = $this->path;
+            self::$path = $application_path;
 
             $this->default_controller = $default_controller;
             $this->default_view = $default_view;
 
             // set up autoloading for controllers
             spl_autoload_register(function($class_name) {
-                $class_path = $this->path . DIRECTORY_SEPARATOR
+                $class_path = Application::$path . DIRECTORY_SEPARATOR
                             . $class_name .'.php';
                 if (!is_readable($class_path)) {
                     return;

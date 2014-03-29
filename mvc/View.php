@@ -2,12 +2,13 @@
 
     namespace Mvc;
 
+    use Mvc\Application;
+
     /**
      * Class that handles template files.
      */
     class View {
 
-        public static $application_path;
         protected $file;
 
         /**
@@ -35,7 +36,7 @@
             $view_name = preg_replace('/View$/', '', $view_name);
 
             // contruct path to template file
-            $view_file = self::$application_path . DIRECTORY_SEPARATOR
+            $view_file = Application::$path . DIRECTORY_SEPARATOR
                        . $controller_name . DIRECTORY_SEPARATOR
                        . $view_name .'.phtml';
 
