@@ -1,7 +1,6 @@
 <?php
 
     use Mvc\Controller;
-    use Mvc\PdoModel;
     use Mvc\View;
 
 
