@@ -2,10 +2,12 @@
 
     namespace Mvc;
 
+    use Mvc\Model;
+
     /**
      * Basic model that can be populated using a JSON file.
      */
-    class JsonModel extends \ArrayIterator implements \Iterator, \Countable {
+    class JsonModel extends \ArrayIterator implements Model {
 
         /**
          * Create a new model based on a JSON file.
