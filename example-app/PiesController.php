@@ -3,7 +3,6 @@
     use Mvc\Controller;
     use Mvc\View;
 
-
     /**
      * Handle some requests that talk about cakes and pies.
      */
@@ -26,7 +25,8 @@
          */
         public function indexView() {
             $view = View::factory(__CLASS__, __FUNCTION__);
-            $view->pies = $this->pies;
+            // only list pies when their name contains an 'r'
+            $view->pies = $this->pies->filter(array('name'=>'R'));
             $view->render();
         }
     }
